@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
-import { App } from 'components/App';
+import App from 'components/App';
 
-export async function serverRenderer() {
+export async function serverRenderer () {
   const initialData = {
     appName: 'Reactful',
   };
@@ -12,9 +12,9 @@ export async function serverRenderer() {
     title: `Hello ${initialData.appName}`,
   };
 
-  return Promise.resolve({
+  return Promise.resolve ({
     initialData,
-    initialMarkup: ReactDOMServer.renderToString(
+    initialMarkup: ReactDOMServer.renderToString (
       <App initialData={initialData} />
     ),
     pageData,
